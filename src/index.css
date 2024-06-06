@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: poppins;
+    src: url("./assets/Poppins/Poppins-Medium.ttf");
+}
+
+body{
+    background: linear-gradient(rgb(3, 50, 50, 0.9), rgb(3, 50, 50, 0.9)), url('../src/assets/bg1.jpg');
+    font-family: poppins;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div{
+    color: #F4F4FC;
+}
+
+/* CSS */
+.btn1 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #A9D681 0, #84b855 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(60, 245, 106, 0.4) 0 2px 4px,rgba(24, 176, 62, 0.3) 0 7px 13px -3px,rgba(24, 185, 38, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.btn1:focus {
+  box-shadow: #2dc46c 0 0 0 1.5px inset, rgba(59, 228, 107, 0.4) 0 2px 4px, rgba(131, 246, 217, 0.3) 0 7px 13px -3px, #44e03c 0 -3px 0 inset;
+}
+
+.btn1:hover {
+  box-shadow: rgba(56, 254, 1, 0.4) 0 4px 8px, rgba(13, 255, 0, 0.3) 0 7px 13px -3px, #179737 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.btn1:active {
+  box-shadow: #3ce05d 0 3px 7px inset;
+  transform: translateY(2px);
+}
