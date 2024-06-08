@@ -9,6 +9,7 @@ module.exports = {
         primaryColor: "#A9D681",
         secondaryColor: "",
         transparentbackground: "rgb(3, 50, 50, 0.9)",
+        transparentbackground2: "rgb(3, 50, 50, 0.5)",
         bgtextColor: "#F4F4FC",
       },
       keyframes: {
