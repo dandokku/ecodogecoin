@@ -3,14 +3,16 @@ import HeroSection from './HeroSection'
 import Tokenomics from './Tokenomics'
 import RoadMap from './RoadMap'
 import AboutSection from './AboutSection'
+import Slider from "./Slider"
 
 function Home() {
   return (
     <div>
       <HeroSection />
       <AboutSection />
-      <RoadMap />
       <Tokenomics />
+      <RoadMap />
+      <Slider />
     </div>
   )
 }
