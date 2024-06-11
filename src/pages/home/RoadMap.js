@@ -1,94 +1,121 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import {
-  EffectCoverflow,
-  Pagination,
-  Navigation,
-  Autoplay,
-} from "swiper/modules";
-import SwiperCore from "swiper";
-import { GrNext, GrPrevious } from "react-icons/gr";
-
-SwiperCore.use([Autoplay, EffectCoverflow, Navigation, Pagination]);
 
 function RoadMap() {
-  const swiperRef = React.useRef(null);
-
-  const handleNextClick = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.autoplay.start();
-      swiperRef.current.swiper.slideNext();
-    }
-  };
-
-  const handlePrevClick = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.autoplay.start();
-      swiperRef.current.swiper.slidePrev();
-    }
-  };
-
   return (
-    <Swiper
-      ref={swiperRef}
-      effect={"coverflow"}
-      centeredSlides={true}
-      loop={true}
-      slidesPerView={"auto"}
-      coverflowEffect={{
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2.5,
-      }}
-      pagination={{ el: ".swiper-pagination", clickable: true }}
-      navigation={{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-        clickable: true,
-      }}
-      modules={[EffectCoverflow, Pagination, Navigation]}
-      className="swiper_container"
-      allowTouchMove={false}
-      autoplay={{ delay: 9000 }}
-    >
-      <SwiperSlide>welp</SwiperSlide>
+    <div className="p-5 px-20 mt-9">
+      <h1 className="md:text-5xl font-bold text-primaryColor text-center my-8">ROADMAP</h1>
 
-      <SwiperSlide>welp</SwiperSlide>
-
-      <SwiperSlide>welp</SwiperSlide>
-
-      <div className="slider-controler">
-        <div
-          className="swiper-button-prev slider-arrow"
-          onClick={handlePrevClick}
-        >
-          <GrPrevious color="white" />
+      <div className="md:flex md:flex-col gap-6 items-center justify-between">
+        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+          <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
+            Phase 1: Official Launch
+          </h1>
+          <ul className="text-start list-disc list-leaf">
+            <li>
+              Official launch of EcoDoge coin, including its white paper,
+              website, and social media channels.
+            </li>
+            <li>
+              Begin marketing efforts to create awareness about EcoDoge's
+              eco-friendly support and its potential impact on the environment.
+            </li>
+            <li>
+              Listing on major cryptocurrency exchanges to increase
+              accessibility and liquidity
+            </li>
+          </ul>
         </div>
-        <div
-          className="swiper-button-next slider-arrow"
-          onClick={handleNextClick}
-        >
-          <GrNext color="white" />
+
+        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+          <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
+            Phase 2: Eco-Friendly Initiatives and Partnerships
+          </h1>
+          <ul className="text-start list-disc list-leaf">
+            <li>
+              Collaborate with environmental organizations and charities to
+              support eco-friendly initiatives using EcoDoge.
+            </li>
+            <li>
+              Implement carbon offset programs where a portion of transaction
+              fees goes towards environmental conservation projects.
+            </li>
+            <li>
+              Forge partnerships with sustainable businesses and brands to
+              accept Ecodoge as a payment method.
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+          <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
+            Phase 3: Technical Enhancements and Community Building
+          </h1>
+          <ul className="text-start list-disc list-leaf">
+            <li>Roll out EcoDoge App for ecological health for our planet.</li>
+            <li>
+              Launch community-driven initiatives such as hackathons, developer
+              grants, and bug bounty programs to encourage innovation and
+              participation in the ecosystem.
+            </li>
+            <li>
+              Expand community outreach through online forums, meetups, and
+              educational resources to onboard new users and developers.
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+          <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
+            Phase 4: 2025 and Beyond - Continued Growth and Innovation
+          </h1>
+          <ul className="text-start list-disc list-leaf">
+            <li>
+              Continuously optimize the EcoDoge protocol through research and
+              development to stay ahead of technological advancements and
+              security threats.
+            </li>
+            <li>
+              Explore interoperability solutions to enable seamless integration
+              with other blockchain networks and decentralized applications.
+            </li>
+            <li>
+              Expand adoption by incentivizing merchants, service providers, and
+              content creators and eco friendly businesses to accept EcoDoge as
+              a form of payment.
+            </li>
+            <li>
+              Foster a vibrant and engaged community through governance
+              mechanisms, voting systems, and community-led initiatives to
+              ensure decentralization and sustainability
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+          <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
+            Phase 5: Long-Term Vision - Global Impact and Sustainability
+          </h1>
+          <ul className="text-start list-disc list-leaf">
+            <li>
+              Position EcoDoge as a leading eco-friendly cryptocurrency with a
+              global presence and significant impact on environmental
+              conservation efforts.
+            </li>
+            <li>
+              Drive mainstream adoption by partnering with governments,
+              institutions, and corporations to integrate EcoDoge into their
+              sustainability initiatives.
+            </li>
+            <li>
+              Continue to innovate and evolve to address emerging challenges and
+              opportunities in the cryptocurrency and environmental space, with
+              a focus on long-term sustainability and positive social impact.
+            </li>
+          </ul>
         </div>
       </div>
-    </Swiper>
+    </div>
   );
 }
 
 export default RoadMap;
-
-// <Swiper
-//   navigation={true}
-//   pagination={{ clickable: true }}
-//   modules={[Navigation, Pagination]}
-//   className="mySwiper"
-// >
-//   <SwiperSlide className="flex items-center justify-center bg-blue-500 text-white h-64">Slide 1</SwiperSlide>
-//   <SwiperSlide className="flex items-center justify-center bg-green-500 text-white h-64">Slide 2</SwiperSlide>
-//   <SwiperSlide className="flex items-center justify-center bg-red-500 text-white h-64">Slide 3</SwiperSlide>
-//   <SwiperSlide className="flex items-center justify-center bg-yellow-500 text-white h-64">Slide 4</SwiperSlide>
-// </Swiper>

@@ -29,6 +29,7 @@ body::-webkit-scrollbar{
 div{
     color: #F4F4FC;
     /* color: #afb8a8; */
+    /* color: rgba(10, 209, 209, 0.9); */
 }
 
 
@@ -36,6 +37,32 @@ div{
 .ma {
   margin: 0 auto;
 }
+ul.list-leaf {
+  list-style: none; /* Remove default list styling */
+  padding-left: 1.5rem; /* Ensure the padding aligns the list inside the box */
+  margin: 0; /* Remove default margins */
+}
+
+ul.list-leaf li {
+  margin-left: 0; /* Adjust margin to align the text properly */
+  padding: 0.5rem 0; /* Add some padding to space out the list items */
+  display: flex;
+  align-items: center;
+}
+
+ul.list-leaf li::before {
+  content: '';
+  background-image: url('./assets/leaf-50.png'); /* Use the leaf image */
+  background-size: contain; /* Ensure the image scales properly */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  display: inline-block;
+  margin-right: 0.5rem; /* Adjust the space between the leaf and the text */
+  width: 2rem; /* Adjust the width for the leaf size */
+  height: 2rem; /* Adjust the height for the leaf size */
+  vertical-align: middle; /* Align vertically with the text */
+}
+
+
 
 
 .btn1 {

@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -10,20 +8,21 @@ module.exports = {
         secondaryColor: "",
         transparentbackground: "rgb(3, 50, 50, 0.9)",
         transparentbackground2: "rgb(3, 50, 50, 0.5)",
+        transparentbackground3: "rgba(10, 209, 209, 0.1)",
         bgtextColor: "#F4F4FC",
         textColor: "#afb8a8",
       },
       keyframes: {
-        'move-up-down': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(30px)' },
+        "move-up-down": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(30px)" },
         },
       },
       animation: {
-        'move-up-down': 'move-up-down 3s ease-in-out infinite',
+        "move-up-down": "move-up-down 3s ease-in-out infinite",
       },
     },
   },
   variants: {},
   plugins: [],
-}
+};
