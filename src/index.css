@@ -28,9 +28,16 @@ body::-webkit-scrollbar{
 
 div{
     color: #F4F4FC;
+    /* color: #afb8a8; */
 }
 
-/* CSS */
+
+/* Custom styling */
+.ma {
+  margin: 0 auto;
+}
+
+
 .btn1 {
   align-items: center;
   appearance: none;

@@ -11,6 +11,7 @@ module.exports = {
         transparentbackground: "rgb(3, 50, 50, 0.9)",
         transparentbackground2: "rgb(3, 50, 50, 0.5)",
         bgtextColor: "#F4F4FC",
+        textColor: "#afb8a8",
       },
       keyframes: {
         'move-up-down': {

@@ -14,10 +14,10 @@ function Navbar() {
       <div className="flex justify-between items-center gap-8">
         <div className="flex gap-6">
           <a href="/" className="text-bgtextColor text-xl">Home</a>
-          <a href="/" className="text-bgtextColor text-xl">Home</a>
-          <a href="/" className="text-bgtextColor text-xl">Home</a>
-          <a href="/" className="text-bgtextColor text-xl">Home</a>
-          <a href="/" className="text-bgtextColor text-xl">Home</a>
+          <a href="/" className="text-bgtextColor text-xl">About</a>
+          <a href="/" className="text-bgtextColor text-xl">Tokenomics</a>
+          <a href="/" className="text-bgtextColor text-xl">Roadmap</a>
+          <a href="/" className="text-bgtextColor text-xl">Contact</a>
         </div>
 
         <div>

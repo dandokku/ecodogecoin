@@ -3,7 +3,7 @@ import HeroSection from './HeroSection'
 import Tokenomics from './Tokenomics'
 import RoadMap from './RoadMap'
 import AboutSection from './AboutSection'
-import Slider from "./Slider"
+import Contact from "./Contact"
 
 function Home() {
   return (
@@ -12,7 +12,7 @@ function Home() {
       <AboutSection />
       <Tokenomics />
       <RoadMap />
-      <Slider />
+      <Contact />
     </div>
   )
 }
