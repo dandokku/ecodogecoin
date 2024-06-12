@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
 import BackgroundImage from "../../assets/bg2.jpg";
+import { ReactTyped } from "react-typed";
+import { useEffect, useRef } from "react";
 
 const links = [
   { name: "Planting Trees", href: "#" },
@@ -7,45 +8,52 @@ const links = [
   { name: "Supporting Renewable Energies", href: "#" },
 ];
 const stats = [
-  { name: "For every transaction, a tree gets planted", value: "Reforestation" },
-  { name: "A portion of transaction fees goes toward ocean cleanup efforts", value: "Ocean Health" },
-  { name: "Word of mouth (WOM) campaigns and social media platforms, email marketing", value: "Marketing and Community Building:" },
-  { name: "#EcoDogeChallenge: Show off your best tree-planting dance and barking moves! Your contribution should be fun", value: "Eco-Friendly Meme Coin With Purpose" },
+  {
+    name: "For every transaction, a tree gets planted",
+    value: "Reforestation",
+  },
+  {
+    name: "A portion of transaction fees goes toward ocean cleanup efforts",
+    value: "Ocean Health",
+  },
+  {
+    name: "Word of mouth (WOM) campaigns and social media platforms, email marketing",
+    value: "Marketing and Community Building:",
+  },
+  {
+    name: "#EcoDogeChallenge: Show off your best tree-planting dance and barking moves! Your contribution should be fun",
+    value: "Eco-Friendly Meme Coin With Purpose",
+  },
 ];
 
 export default function AboutSection() {
-  const sectionRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target); // Optional: Stop observing after the first trigger
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 } // Adjust the threshold as needed
     );
 
-    const section = sectionRef.current;
-    if (section) {
-      const elements = section.querySelectorAll(".fade-in");
-      elements.forEach((element) => observer.observe(element));
-    }
+    const elements = containerRef.current.querySelectorAll(".fade-in-left");
+    elements.forEach((el) => observer.observe(el));
 
     return () => {
-      if (section) {
-        const elements = section.querySelectorAll(".fade-in");
-        elements.forEach((element) => observer.unobserve(element));
+      if (containerRef.current) {
+        elements.forEach((el) => observer.unobserve(el));
       }
     };
   }, []);
-
-
   return (
-    <div className="relative isolate overflow-hidden p-5 px-12 sm:py-32 fade-in" >
-      <div className="relative h-full w-full " ref={useRef}>
+    <div className="relative isolate overflow-hidden p-5 px-12 sm:py-32">
+      <div className="relative h-full w-full">
         <img
           src={BackgroundImage}
           alt=""
@@ -80,8 +88,18 @@ export default function AboutSection() {
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-primaryColor sm:text-6xl">
-          Much Green, Very Efficient
+          <h2 className="text-2xl font-bold tracking-tight text-primaryColor sm:text-4xl w-full">
+            <ReactTyped
+              strings={[
+                "Much Green, Very Efficient",
+                "Eco-Friendly Cryptocurrency",
+                "Join the Green Revolution",
+                "Planting Trees with Every Transaction",
+              ]}
+              typeSpeed={50}
+              backSpeed={30}
+              loop
+            />
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             EcoDoge aims to create a decentralized, eco-friendly cryptocurrency
@@ -91,17 +109,29 @@ export default function AboutSection() {
             impact on the environment. 🌲
           </p>
         </div>
-        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+        <div
+          ref={containerRef}
+          className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none"
+        >
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-            {links.map((link) => (
-              <a key={link.name} href={link.href}>
+            {links.map((link, index) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="fade-in-left"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </a>
             ))}
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col-reverse">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.name}
+                className="flex flex-col-reverse fade-in-left"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <dt className="text-base leading-7 text-gray-300">
                   {stat.name}
                 </dt>

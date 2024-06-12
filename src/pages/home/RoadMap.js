@@ -1,12 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 function RoadMap() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = sectionRef.current;
+    if (section) {
+      const elements = section.querySelectorAll(".fade-in");
+      elements.forEach((element) => observer.observe(element));
+    }
+
+    return () => {
+      if (section) {
+        const elements = section.querySelectorAll(".fade-in");
+        elements.forEach((element) => observer.unobserve(element));
+      }
+    };
+  }, []);
   return (
-    <div className="p-5 px-20 mt-9">
+    <div className="p-5 px-20 mt-9" ref={sectionRef}>
       <h1 className="md:text-5xl font-bold text-primaryColor text-center my-8">ROADMAP</h1>
 
       <div className="md:flex md:flex-col gap-6 items-center justify-between">
-        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+        <div className="fade-in flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
           <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
             Phase 1: Official Launch
           </h1>
@@ -26,7 +53,7 @@ function RoadMap() {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+        <div className="fade-in flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
           <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
             Phase 2: Eco-Friendly Initiatives and Partnerships
           </h1>
@@ -46,7 +73,7 @@ function RoadMap() {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+        <div className=" fade-in flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
           <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
             Phase 3: Technical Enhancements and Community Building
           </h1>
@@ -64,7 +91,7 @@ function RoadMap() {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+        <div className="fade-in flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
           <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
             Phase 4: 2025 and Beyond - Continued Growth and Innovation
           </h1>
@@ -91,7 +118,7 @@ function RoadMap() {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
+        <div className="fade-in flex flex-col items-center p-5 w-[70%] h-max bg-transparentbackground3 rounded-md">
           <h1 className="text-2xl text-primaryColor shadow-sm shadow-bgtextColor bg-transparentbackground3 p-2 mb-2 w-[70%] text-center">
             Phase 5: Long-Term Vision - Global Impact and Sustainability
           </h1>

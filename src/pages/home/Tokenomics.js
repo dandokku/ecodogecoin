@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 function Tokenomics() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = sectionRef.current;
+    if (section) {
+      const elements = section.querySelectorAll(".fade-in");
+      elements.forEach((element) => observer.observe(element));
+    }
+
+    return () => {
+      if (section) {
+        const elements = section.querySelectorAll(".fade-in");
+        elements.forEach((element) => observer.unobserve(element));
+      }
+    };
+  }, []);
   return (
-    <div className="p-5 px-20">
+    <div className="p-5 px-20"  ref={sectionRef}>
       <h1 className="md:text-6xl mb-6 text-primaryColor">Tokenomics</h1>
 
-      <div className="flex flex-col gap-5 items-center">
+      <div className="flex flex-col gap-5 items-center fade-in">
         <div className="p-4 bg-transparentbackground2 rounded-md max-h-min w-[90vw]">
           <h1 className="font-bold md:text-2xl">
             Max Supply: 379,000,000,000 EcoDoge Coin

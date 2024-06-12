@@ -133,3 +133,33 @@ ul.list-leaf li::before {
   transform: translateY(0);
 }
 
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0; /* Start hidden */
+}
+
+.fade-in-left.in-view {
+  animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+
+.fade-in-left:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.fade-in-left:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.fade-in-left:nth-child(3) {
+  animation-delay: 0.3s;
+}
+/* Add more nth-child rules as needed */

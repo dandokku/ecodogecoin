@@ -51,7 +51,6 @@ function HeroSection() {
             strings={["ECODOGE"]}
             typeSpeed={100}
             backSpeed={100}
-            loop
             cursorChar={" "}
           />
           <span className="custom-typed-cursor"></span>
