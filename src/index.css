@@ -32,6 +32,15 @@ div{
     /* color: rgba(10, 209, 209, 0.9); */
 }
 
+.custom-typed-cursor {
+  background: url('./assets/cursor.png') no-repeat;
+  display: inline-block;
+  width: 80px; /* Adjust width and height based on your cursor image */
+  height: 70px;
+  vertical-align: middle;
+}
+
+
 
 /* Custom styling */
 .ma {
@@ -109,3 +118,18 @@ ul.list-leaf li::before {
   box-shadow: #3ce05d 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+
+
+/*! CUSTOM ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

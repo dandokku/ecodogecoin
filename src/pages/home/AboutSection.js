@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import BackgroundImage from "../../assets/bg2.jpg";
 
 const links = [
@@ -13,9 +14,38 @@ const stats = [
 ];
 
 export default function AboutSection() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = sectionRef.current;
+    if (section) {
+      const elements = section.querySelectorAll(".fade-in");
+      elements.forEach((element) => observer.observe(element));
+    }
+
+    return () => {
+      if (section) {
+        const elements = section.querySelectorAll(".fade-in");
+        elements.forEach((element) => observer.unobserve(element));
+      }
+    };
+  }, []);
+
+
   return (
-    <div className="relative isolate overflow-hidden p-5 px-12 sm:py-32">
-      <div className="relative h-full w-full">
+    <div className="relative isolate overflow-hidden p-5 px-12 sm:py-32 fade-in" >
+      <div className="relative h-full w-full " ref={useRef}>
         <img
           src={BackgroundImage}
           alt=""
