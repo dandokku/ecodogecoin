@@ -44,9 +44,9 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="flex items-center justify-between p-5 px-20" ref={sectionRef}>
-      <div className="flex flex-col gap-2 fade-in">
-        <h1 className="md:text-8xl">
+    <div className="flex flex-col md:flex-row items-center justify-between p-5 px-10 md:px-20 my-9" ref={sectionRef}>
+      <div className="flex flex-col gap-2 fade-in md:w-1/2">
+        <h1 className="md:text-7xl text-5xl">
           <ReactTyped
             strings={["ECODOGE"]}
             typeSpeed={100}
@@ -55,21 +55,21 @@ function HeroSection() {
           />
           <span className="custom-typed-cursor"></span>
         </h1>
-        <p className="md:text-4xl fade-in">
+        <p className="md:text-3xl lg:text-4xl fade-in">
           Much Wow, Very{" "}
-          <span className="text-primaryColor md:text-5xl">Green</span> Tail
+          <span className="text-primaryColor md:text-4xl lg:text-5xl">Green</span> Tail
         </p>
-        <p className="md:text-xl flex fade-in">
+        <p className="md:text-lg lg:text-xl flex fade-in">
           We combine the playful spirit of Dogecoin with a commitment to saving
           our planet{" "}
         </p>
 
-        <button className="btn1 w-[20%] fade-in" onClick={handleDownload}>
+        <button className="btn1 md:w-1/3 lg:w-[20%] w-[40%] fade-in" onClick={handleDownload}>
           White Paper
         </button>
       </div>
 
-      <img src={HeroImage} alt="" className="w-[60%] animate-move-up-down fade-in" />
+      <img src={HeroImage} alt="" className="w-full md:w-1/2 md:block hidden animate-move-up-down fade-in" />
     </div>
   );
 }
