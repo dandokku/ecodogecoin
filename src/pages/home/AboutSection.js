@@ -52,7 +52,7 @@ export default function AboutSection() {
     };
   }, []);
   return (
-    <div className="relative isolate overflow-hidden p-5 px-12 sm:py-32">
+    <div className="relative isolate overflow-hidden p-5 px-12 sm:py-20">
       <div className="relative h-full w-full">
         <img
           src={BackgroundImage}
