@@ -30,7 +30,7 @@ function Tokenomics() {
   }, []);
   return (
     <div className="p-5 px-20"  ref={sectionRef}>
-      <h1 className="md:text-6xl mb-6 text-primaryColor">Tokenomics</h1>
+      <h1 className="text-left md:text-16xl mb-6 text-primaryColor">Tokenomics</h1>
 
       <div className="flex flex-col gap-5 items-center fade-in">
         <div className="p-4 bg-transparentbackground2 rounded-md max-h-min w-[90vw]">
