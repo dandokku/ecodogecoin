@@ -28,11 +28,12 @@ function ScrollToTopButton() {
   }, []);
 
   return (
-    <div className="fixed bottom-4 right-4">
+    <div className="fixed bottom-4 right-4 z-[1000]"> {/* Increased z-index */}
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="p-4 bg-primaryColor text-white rounded-full shadow-lg hover:bg-transparentbackground2 focus:outline-none"
+          aria-label="Scroll to Top"
+          className="p-3 md:p-4 bg-primaryColor text-white rounded-full shadow-lg hover:bg-transparentbackground2 transition-colors duration-300 focus:outline-none animate-fade-in"
         >
           ↑
         </button>
