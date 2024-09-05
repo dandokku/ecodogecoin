@@ -1,0 +1,2 @@
+- The Hero and About Section responsiveness still needs more work
+- Update social links and contact

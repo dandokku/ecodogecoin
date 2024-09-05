@@ -54,7 +54,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <div className="relative isolate overflow-hidden p-5 px-12 sm:py-20">
+    <div className="relative isolate overflow-hidden mt-24 px-8 sm:py-20">
       <div className="relative h-full w-full">
         <img
           src={BackgroundImage}
@@ -67,12 +67,7 @@ export default function AboutSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
-            className="text-2xl font-bold tracking-tight text-primaryColor sm:text-4xl w-full"
-            style={{
-              // Set a fixed height based on the tallest possible text
-              minHeight: "1rem", // Adjust this height based on your font-size and max string length
-            }}
-          >
+            className="text-2xl font-bold tracking-tight text-primaryColor sm:text-4xl w-full min-h-[4rem]">
             <ReactTyped
               strings={[
                 "Much Green, Very Efficient",
