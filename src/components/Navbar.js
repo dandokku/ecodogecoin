@@ -66,7 +66,7 @@ function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-gradient-to-br from-green-50 via-white to-green-50 ${
           isScrolled
             ? "backdrop-blur-md shadow-sm"
             : "bg-transparent"
@@ -103,7 +103,7 @@ function Navbar() {
                       ? "text-green-600"
                       : isScrolled
                       ? "text-gray-700 hover:text-green-600"
-                      : "text-white hover:text-green-600"
+                      : "text-green-600 hover:text-green-700"
                   }`}
                 >
                   <span className="relative z-10">{link.label}</span>
