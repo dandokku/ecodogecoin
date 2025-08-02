@@ -100,7 +100,7 @@ function HeroSection() {
           <div className="space-y-8 text-center lg:text-left">
             
             {/* Main Heading with Enhanced Typography */}
-            <div className="fade-element opacity-0">
+            {/* <div className="fade-element opacity-0">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight">
                 <div className="relative inline-block">
                   <ReactTyped
@@ -113,7 +113,7 @@ function HeroSection() {
                   <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-green-400 opacity-20 blur-xl animate-pulse"></div>
                 </div>
               </h1>
-            </div>
+            </div> */}
 
             {/* Subtitle with Animation */}
             <div className="fade-element opacity-0">
