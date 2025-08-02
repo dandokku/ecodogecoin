@@ -69,7 +69,6 @@ function Navbar() {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 md:h-20">
-            {/* Enhanced Logo Section */}
             <div className="flex items-center group cursor-pointer">
               <div className="relative">
                 <div className="absolute inset-0 bg-green-400/20 rounded-full scale-110 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out"></div>
@@ -109,18 +108,16 @@ function Navbar() {
                     activeSection === link.id ? 'w-full' : 'w-0 group-hover:w-full'
                   }`}></div>
                   
-                  {/* Hover background */}
                   <div className="absolute inset-0 bg-green-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-200 origin-center"></div>
                 </a>
               ))}
             </div>
 
-            {/* Enhanced Mobile Menu Button */}
             <button
               onClick={handleMenuToggle}
               aria-label="Toggle Menu"
               className={`md:hidden relative w-10 h-10 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+                isScrolled ? 'text-gray-700' : 'text-gray-500'
               }`}
             >
               <div className="absolute inset-0 bg-green-100/20 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-200"></div>
@@ -139,13 +136,12 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Enhanced Mobile Menu */}
         <div className={`md:hidden transition-all duration-300 ease-in-out ${
           isMenuOpen 
             ? 'max-h-96 opacity-100' 
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="bg-white/95 backdrop-blur-md border-t border-green-100 shadow-lg">
+          <div className="backdrop-blur-md border-t border-green-100 shadow-lg">
             <div className="px-4 py-2 space-y-1">
               {navLinks.map((link, index) => (
                 <a
@@ -154,8 +150,8 @@ function Navbar() {
                   onClick={(e) => handleLinkClick(e, link.href)}
                   className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 transform ${
                     activeSection === link.id
-                      ? 'text-green-600 bg-green-50 scale-105'
-                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50 hover:scale-105'
+                      ? 'text-gray-600 bg-green-300 scale-105'
+                      : 'text-gray-700 hover:text-gray-600 hover:bg-green-400 hover:scale-105'
                   }`}
                   style={{
                     animationDelay: `${index * 50}ms`,
