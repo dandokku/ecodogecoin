@@ -207,7 +207,7 @@ function HeroSection() {
                   <img 
                     src={HeroImage} 
                     alt="EcoDoge - Sustainable Cryptocurrency" 
-                    className="w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-contain animate-float group-hover:scale-110 transition-transform duration-700 filter drop-shadow-2xl" 
+                    className="w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-contain animate-float group-hover:scale-110 transition-transform duration-700 filter drop-shadow-2xl hidden md:block" 
                   />
                   
                   {/* Orbiting elements */}
