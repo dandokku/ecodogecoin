@@ -1,2 +1,2 @@
-- Update social links and contact
-- Reduce the long texts tf
+- fix responsiveness issues in contact, navbar, footer and the buttons
+- update links to use personal details (phone number, emails, social links, etc)
