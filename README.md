@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# EcodogeCoin
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+**EcodogeCoin** is a modern, responsive crypto coin website built with React and Tailwind CSS.
+It’s designed as a marketing and informational site for a cryptocurrency project, showcasing the coin’s vision, tokenomics, roadmap, and contact details in a clean, animated layout.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+* **React 18** – Component-based UI
+* **React Router v6** – Single Page App routing
+* **Tailwind CSS 3** – Utility-first styling
+* **Framer Motion** – Animations and transitions
+* **Swiper** – Sliders and carousels
+* **React Icons & Heroicons** – Iconography
+* **React Typed** – Animated typewriter text effect
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Hero Section** – Eye-catching intro with animated text
+* **About Section** – Explains the purpose and mission of EcodogeCoin
+* **Tokenomics** – Visual breakdown of coin distribution
+* **Roadmap** – Project milestones in a timeline format
+* **Contact Section** – Easy way for visitors to reach out
+* **Responsive Layout** – Works across desktop, tablet, and mobile
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+  components/
+    SharedLayout.jsx
+  pages/
+    home/
+      Home.jsx
+      HeroSection.jsx
+      AboutSection.jsx
+      Tokenomics.jsx
+      RoadMap.jsx
+      Contact.jsx
+  App.jsx
+  index.js
+  App.css
+tailwind.config.js
+postcss.config.js
+```
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/dandokku/ecodogecoin.git
+   cd ecodogecoin
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Run the development server**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Build for production**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm run build
+   ```
 
-## Learn More
+## Tailwind Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Tailwind is configured in `tailwind.config.js` and processed via PostCSS.
+Utility classes are used across all components for layout, spacing, and colors.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
 
-### Code Splitting
+The site can be deployed to platforms like Netlify, Vercel, or GitHub Pages with no additional backend requirements.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you want, I can also **combine this README style with the one I wrote for your beauty store**, so all your GitHub repos follow the same tone, structure, and branding.
+That way they feel like a unified dev portfolio. Would you like me to do that?
