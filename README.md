@@ -80,8 +80,3 @@ Utility classes are used across all components for layout, spacing, and colors.
 ## Deployment
 
 The site can be deployed to platforms like Netlify, Vercel, or GitHub Pages with no additional backend requirements.
-
----
-
-If you want, I can also **combine this README style with the one I wrote for your beauty store**, so all your GitHub repos follow the same tone, structure, and branding.
-That way they feel like a unified dev portfolio. Would you like me to do that?
